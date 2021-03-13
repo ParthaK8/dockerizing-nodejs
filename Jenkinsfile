@@ -14,7 +14,7 @@ node() {
         echo "Cloning git"
         def parthak8_url = "git@github.com:ParthaK8/dockerizing-nodejs"
         def parthak8_branch = "*/nodejs-app-code"
-        def local_dir = "nodejs_app"
+        def local_dir = ""
         myCheckout(parthak8_url, parthak8_branch, local_dir)
 
         // set an environment variable, value of local_dir
