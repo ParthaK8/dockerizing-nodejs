@@ -22,6 +22,7 @@ node() {
         // Verify
         sh "ls -la"
         sh "ls -la ${LOCAL_DIR}"
+        sh "chmod 666 Dockerfile"
         def CWDABSPATH
         CWDABSPATH = sh (
         script: "echo `pwd`",
@@ -32,7 +33,7 @@ node() {
     }
 
     stage('Build image') {
-            app = docker.build("-f ./Dockerfile", "parthakaushik/addressbook_app")
+            app = docker.build("parthakaushik/addressbook_app")
     }
     stage('Test image') {
     app.inside {
