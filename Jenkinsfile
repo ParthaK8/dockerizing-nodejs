@@ -12,7 +12,7 @@ def myCheckout(myGitUrl, myBranch, myLocalDir) {
 node() {
     stage('clone the git') {
         echo "Cloning git"
-        def parthak8_url = "git@github.com:ParthaK8/codesamples"
+        def parthak8_url = "git@github.com:ParthaK8/dockerizing-nodejs"
         def parthak8_branch = "*/nodejs-app-code"
         def local_dir = "nodejs_app"
         myCheckout(parthak8_url, parthak8_branch, local_dir)
