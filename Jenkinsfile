@@ -32,7 +32,7 @@ node() {
     }
 
     stage('Build image') {
-            app = docker.build("parthakaushik/addressbook_app", "--file ./Dockerfile")
+            app = docker.build("parthakaushik/addressbook_app", "-f ./Dockerfile")
     }
     stage('Test image') {
     app.inside {
